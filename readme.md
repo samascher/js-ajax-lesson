@@ -68,7 +68,7 @@ While you're at it, in the starter-code folder, we've got a super basic index an
 
 Open up your `index.html` in a browser, and you'll see:
 
-<img width="752" src="https://cloud.githubusercontent.com/assets/25366/9149100/765ffaae-3d4d-11e5-850d-c8b15c7900e6.png">
+<img width="752" src="assets/catRescue.png">
 
 Make sure to open your console - we're going to be working with it quite a bit.
 
@@ -76,7 +76,7 @@ Now, we've set a few things up for you. Besides the beautiful layout, we have a 
 
 We've also already included jQuery, though we won't use that for the first few minutes.
 
-<!--11:20 15 minutes -->
+<!--11:20 10 minutes -->
 
 ## GET Requests - Catch Up
 
@@ -119,7 +119,7 @@ Then, of course, we've got a function that runs if the requests works, and anoth
 
 Finally, we send our request and see what happens. In this instance, we get back an array of cats.
 
-<!--11:35 15 minutes -->
+<!--11:30 10 minutes -->
 
 #### jQuery GET Requests
 
@@ -130,7 +130,7 @@ Since we've already included jQuery in our HTML's head, let's try doing the same
 If you hit `cmd+k` in your browser console, it'll clear it to start fresh.
 
 ```js
-  var ajax = $.get('https://ga-cat-rescue.herokuapp.com/api/cats')
+  var ajax = $.get('https://ga-cat-rescue.herokuapp.com/api/cats');
 ```
 
 Let's look at what our `ajax` variable holds now.
@@ -139,7 +139,7 @@ Let's look at what our `ajax` variable holds now.
 
 console.log(ajax); -->
 
-<img width="633" src="https://cloud.githubusercontent.com/assets/25366/9149156/825a0392-3d50-11e5-80c7-de1088a5b84e.png">
+<img width="633" src="assets/ajaxResponse.png">
 
 That's some awesome info. What's this `responseText`? Looks useful:
 
@@ -166,16 +166,21 @@ Try that out. If there's any luck, our connection will be a little slow, and you
 
 In jQuery's documentation you can find all the chain-able callback function possibilities – the three you'll probably use a lot are `.done`, `.fail`, and `.always`.
 
-<!--11:50 20 minutes -->
+<!--11:40 30 minutes -->
 
 ## Independent Practice
 
 Now, using your console, I want to you to try a few more API tasks on this endpoint:
 
 - Get a single cat and spit out the JSON collection in the console
+    - Hint: What might we add to the URL to get a `Show` route for a specific `id`?
 - Use the more generic [$.ajax](http://api.jquery.com/jquery.ajax/) to do the same request
-- Modify that cat by changing its name
-- Add a new cat to the list with a name and a note
+- Modify that cat by changing its name\*
+    - Hint: What verb would we use to `Update` something?
+- Add a new cat to the list with a name and a note\*
+    - Hint: What verb would we use to `Create` something?
+
+\* First try this with Postman, then check the documentation on these verbs for jQuery.  In order to send data you will need to do two things.  First, you will need to create an object (using JSON).  Second, you will need to convert it to a string.
 
 <!--12:10 10 minutes -->
 ## Conclusion (5 mins)
