@@ -21,6 +21,7 @@
     url: 'https://ga-cat-rescue.herokuapp.com/api/cats/1',
     type: 'PUT',
     dataType: 'json',
+    contentType: 'application/json',
     data: {id: 1, name: "Captain Meowington", note: "This cat gets stuff done."},
   }).done(function(data){
     console.log(data);
@@ -32,7 +33,7 @@
     note: "Like Christmas but better!"
   };
 
-  $.post('https://ga-cat-rescue.herokuapp.com/api/cats', cat)
+  $.post('https://ga-cat-rescue.herokuapp.com/api/cats', JSON.stringify(cat))
     .done(function(data){
       console.log("Kitty was added");
     });
