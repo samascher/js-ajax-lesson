@@ -17,11 +17,18 @@
   // You should use type if you're using versions of jQuery prior to 1.9.0.
 
   // Modify that cat by changing its name
+  var catUpdate = {
+    id: 1, 
+    name: "Captain Meowington", 
+    note: "This cat gets stuff done."
+  };
+
+  // Modify that cat by changing its name
   $.ajax({
     url: 'https://ga-cat-rescue.herokuapp.com/api/cats/1',
     type: 'PUT',
     dataType: 'json',
-    data: {id: 1, name: "Captain Meowington", note: "This cat gets stuff done."},
+    data: JSON.stringify(catUpdate),
   }).done(function(data){
     console.log(data);
   });
