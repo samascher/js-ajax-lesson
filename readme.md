@@ -189,7 +189,11 @@ Now, using your console, I want to you to try a few more API tasks on this endpo
 - How do you do a GET request with jQuery?
 - How do you do a PUT, POST, or DELETE request in jQuery?
 
+<!--12:20 5 minutes -->
+
+<!--Give students a few minutes to read the first article below, then pair-share...finally, alert them about the high frequency of the error in the second article, and that the third article is a way to solve it using tools we will learn next week-->
+
 #### Extra Reading
-- [`No 'Access-Control-Allow-Origin' header is present on the requested resource` – WTF?](https://jvaneyck.wordpress.com/2014/01/07/cross-domain-requests-in-javascript/)
 - [What is Cross Origin Resource Sharing (CORS)?](https://www.maxcdn.com/one/visual-glossary/cors/)
+- [`No 'Access-Control-Allow-Origin' header is present on the requested resource` – WTF?](https://jvaneyck.wordpress.com/2014/01/07/cross-domain-requests-in-javascript/)
 - [Using CORS with Express](http://enable-cors.org/server_expressjs.html)
