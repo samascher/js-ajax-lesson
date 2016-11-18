@@ -62,7 +62,7 @@ While we're going to be tackling some advanced front-end frameworks in the next 
 
 While we're still learning the ins-and-outs of building APIs, let's use an already-made API for today. We'll use one that works a lot like Mongo and Express (coming soon!) and comes with RESTful resources out of the box.
 
-This handy thing lives at https://api.doughnuts.ga/doughnuts – it's a simple dummy data service that'll let us do GETs & POSTs quickly. You can quickly check out https://www.doughnuts.ga/ to see what it's about.
+This handy thing lives at https://ga-cat-rescue.herokuapp.com/api/cats – it's a simple dummy data service that'll let us do GETs & POSTs quickly.
 
 While you're at it, in the starter-code folder, we've got a super basic index and a CSS file to get started. Nothing fancy.
 
@@ -72,7 +72,9 @@ Open up your `index.html` in a browser, and you'll see:
 
 Make sure to open your console - we're going to be working with it quite a bit.
 
-Now, we've set a few things up for you. Besides the beautiful layout, we have a form with an input and a select dropdown. We've also already included jQuery, though we won't use that for the first few minutes.
+Now, we've set a few things up for you. Besides the beautiful layout, we have a form with an input and a textarea. We will be tying this form in tomorrow, but for now all we need is our console.
+
+We've also already included jQuery, though we won't use that for the first few minutes.
 
 <!--11:20 15 minutes -->
 
@@ -80,13 +82,13 @@ Now, we've set a few things up for you. Besides the beautiful layout, we have a 
 
 #### Vanilla JavaScript
 
-Open up your browser and the console and follow along.   We're gonna start with old-school JavaScript, so you can see how it works without any libraries.
+Open up your browser and the console. We're gonna start with old-school JavaScript, so you can see how it works without any libraries.
 
 _**Note:** You might want to write the code out in Sublime first and then copy it across to your console as it is easier to change typos._
 
 ```js
   var request = new XMLHttpRequest();
-  request.open('GET', 'https://api.doughnuts.ga/doughnuts', true);
+  request.open('GET', 'https://ga-cat-rescue.herokuapp.com/api/cats', true);
 
   request.onload = function() {
     if (request.status >= 200 && request.status < 400) {
@@ -115,7 +117,7 @@ Method matches our HTTP verb, URL is the path we are hitting, and async is just 
 
 Then, of course, we've got a function that runs if the requests works, and another if it doesn't. Just `console.log` for now.
 
-Finally, we send our request and see what happens. In this instance, we get back an array of doughnuts.
+Finally, we send our request and see what happens. In this instance, we get back an array of cats.
 
 <!--11:35 15 minutes -->
 
@@ -128,34 +130,33 @@ Since we've already included jQuery in our HTML's head, let's try doing the same
 If you hit `cmd+k` in your browser console, it'll clear it to start fresh.
 
 ```js
-  var ajax = $.get('https://api.doughnuts.ga/doughnuts')
+  var ajax = $.get('https://ga-cat-rescue.herokuapp.com/api/cats')
 ```
 
 Let's look at what our `ajax` variable holds now.
 
+<!-- Show what happens when you type this:
+
+console.log(ajax); -->
+
 <img width="633" src="https://cloud.githubusercontent.com/assets/25366/9149156/825a0392-3d50-11e5-80c7-de1088a5b84e.png">
 
-That's some awesome info. What's this `responseJSON`? Looks useful:
+That's some awesome info. What's this `responseText`? Looks useful:
 
 ```js
-  ajax.responseJSON
+  ajax.responseText
 ```
 
 Well isn't that just exactly what we need? How handy!
 
 What did this do? Without refreshing the page, we hit an external API – a totally different URL that's rendering JSON data instead of views – and brought that data back into our page.
 
-<!-- Show what happens when you type this:
-
-var ajax = $.get('https://api.doughnuts.ga/doughnuts');
-console.log(ajax); -->
-
 ### A little more programmatically now
 
 While that's great, it's dangerously asynchronous. How do we build this so that it `console.log`'s the response when an AJAX request actually succeeds, instead of right after it runs in the console?
 
 ```js
-  var ajax = $.get('https://api.doughnuts.ga/doughnuts')
+  var ajax = $.get('https://ga-cat-rescue.herokuapp.com/api/cats')
     .done(function(data){
       console.log(data);
     });
@@ -171,10 +172,10 @@ In jQuery's documentation you can find all the chain-able callback function poss
 
 Now, using your console, I want to you to try a few more API tasks on this endpoint:
 
-- Get a single donut and spit out the JSON collection in the console
+- Get a single cat and spit out the JSON collection in the console
 - Use the more generic [$.ajax](http://api.jquery.com/jquery.ajax/) to do the same request
-- Modify that donut by changing its flavor
-- Add a new donut to the list with style and flavor
+- Modify that cat by changing its name
+- Add a new cat to the list with a name and a note
 
 <!--12:10 10 minutes -->
 ## Conclusion (5 mins)
