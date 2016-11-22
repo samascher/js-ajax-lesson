@@ -40,7 +40,7 @@ In general the process looks like this – use JavaScript on the client side to 
 
 - __Compact__ - With AJAX, several application features can be handled using a single web page. That means we modularize our app into smaller bits, and it becomes easier to work on.
 
-- __Backend Separated from Front-end__ - Applications that use AJAX-heavy front-ends allow developers to avoid working on both sides of the stack at the same time. Some developers can be dedicated to building an API that just serves data, and others can focus on consuming that data and building interfaces.
+- __Back-end Separated from Front-end__ - Applications that use AJAX-heavy front-ends allow developers to avoid working on both sides of the stack at the same time. Some developers can be dedicated to building an API that just serves data, and others can focus on consuming that data and building interfaces.
 
 
 ### Disadvantages
@@ -72,7 +72,7 @@ Open up your `index.html` in a browser, and you'll see:
 
 Make sure to open your console - we're going to be working with it quite a bit.
 
-Now, we've set a few things up for you. Besides the beautiful layout, we have a form with an input and a textarea. We will be tying this form in tomorrow, but for now all we need is our console.
+Now, we've set a few things up for you. Besides the beautiful layout, we have a form with an input and a textarea. We will be tying this form in later, but for now all we need is our console.
 
 We've also already included jQuery, though we won't use that for the first few minutes.
 
@@ -81,6 +81,8 @@ We've also already included jQuery, though we won't use that for the first few m
 ## GET Requests - Catch Up
 
 #### Vanilla JavaScript
+
+<!--Code-along for this piece -->
 
 Open up your browser and the console. We're gonna start with old-school JavaScript, so you can see how it works without any libraries.
 
@@ -118,6 +120,8 @@ Method matches our HTTP verb, URL is the path we are hitting, and async is just 
 Then, of course, we've got a function that runs if the requests works, and another if it doesn't. Just `console.log` for now.
 
 Finally, we send our request and see what happens. In this instance, we get back an array of cats.
+
+<!--Half-mast for this piece -->
 
 <!--11:30 10 minutes -->
 
