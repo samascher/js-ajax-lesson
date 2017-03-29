@@ -15,12 +15,14 @@ competencies: Front-end intro
 # AJAX with JS & JQuery
 
 ### Objectives
+*By the end of this lesson, student should be able to:*
 
 - **Implement** an AJAX request with Vanilla JS
 - **Implement** a jQuery AJAX client for a simple REST service
 - **Reiterate** the benefits of separation of concerns – API vs. Client
 
 ### Preparation
+*Before this lesson, student should already be able to:*
 
 - **Understand** basics of JS
 - **Understand** what jQuery is and how to use it for DOM manipulation
