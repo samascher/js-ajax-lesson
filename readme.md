@@ -80,15 +80,13 @@ We've also already included jQuery, though we won't use that for the first few m
 
 <!--11:20 10 minutes -->
 
-## GET Requests - Catch Up
+## GET Requests - Code Along
 
 #### Vanilla JavaScript
 
 <!--Code-along for this piece -->
 
 Open up your browser and the console. We're gonna start with old-school JavaScript, so you can see how it works without any libraries.
-
-_**Note:** You might want to write the code out in Sublime first and then copy it across to your console as it is easier to change typos._
 
 ```js
   var request = new XMLHttpRequest();
@@ -125,7 +123,7 @@ Finally, we send our request and see what happens. In this instance, we get back
 
 <!--Half-mast for this piece -->
 
-<!--11:30 10 minutes -->
+<!--11:30 15 minutes -->
 
 #### jQuery GET Requests
 
@@ -172,7 +170,7 @@ Try that out. If there's any luck, our connection will be a little slow, and you
 
 In jQuery's documentation you can find all the chain-able callback function possibilities – the three you'll probably use a lot are `.done`, `.fail`, and `.always`.
 
-<!--11:40 30 minutes -->
+<!--11:45 30 minutes -->
 
 ## Independent Practice
 
@@ -188,14 +186,14 @@ Now, using your console, I want to you to try a few more API tasks on this endpo
 
 \* First try this with Postman, then check the documentation on these verbs for jQuery.  In order to send data you will need to do two things.  First, you will need to create an object (using JSON).  Second, you will need to convert it to a string.
 
-<!--12:10 10 minutes -->
+<!--12:15 10 minutes -->
 ## Conclusion (5 mins)
 - What's the main use case of AJAX? Why would anyone use it?
 - How do you do a simple GET request in vanilla JS?
 - How do you do a GET request with jQuery?
 - How do you do a PUT, POST, or DELETE request in jQuery?
 
-<!--12:20 5 minutes -->
+<!--12:25 5 minutes -->
 
 <!--Give students a few minutes to read the first article below, then pair-share...finally, alert them about the high frequency of the error in the second article, and that the third article is a way to solve it using tools we will learn next week-->
 
