@@ -1,39 +1,32 @@
-
-  // Get a single cat and spit out the JSON collection in the console
-  var ajax = $.get('https://ga-cat-rescue.herokuapp.com/api/cats/1')
+  // Get all cats and spit out the JSON collection in the console
+  $.get('https://ga-cat-rescue.herokuapp.com/api/cats')
     .done(function(data){
       console.log(data);
     });
 
+  // Now, get a single cat and spit out the JSON in the console
+
+
   // Use the more generic $.ajax to do the same request
-  $.ajax({
-  	url: 'https://ga-cat-rescue.herokuapp.com/api/cats/1',
-    method: 'get', // GET by default
-    dataType: 'json' // Intelligent Guess by default (xml, json, script, or html)
-  }).done(function(data){
-    console.log(data);
-  });
-  // type: is an alias for method.
-  // You should use type if you're using versions of jQuery prior to 1.9.0.
+  
 
   // Modify that cat by changing its name
-  $.ajax({
-    url: 'https://ga-cat-rescue.herokuapp.com/api/cats/1',
-    type: 'PUT',
-    dataType: 'json',
-    contentType: 'application/json',
-    data: {id: 1, name: "Captain Meowington", note: "This cat gets stuff done."},
-  }).done(function(data){
-    console.log(data);
-  });
+  // the property `type:` is an alias for method.
+  // By default, your `type` is GET, but we need to use
+  // a different one here...remember which one?
+
 
   // Add a new cat to the list with name and note
   var cat = {
-    name: "Caturnalia",
-    note: "Like Christmas but better!"
+    // name here
+
+    //note here
+
   };
 
-  $.post('https://ga-cat-rescue.herokuapp.com/api/cats', JSON.stringify(cat))
-    .done(function(data){
-      console.log("Kitty was added");
-    });
+  // Now make the AJAX request. What verb adds new data
+  // to our endpoint?
+
+  // Remember JSON is serialized, so you will need to
+  // "stringify" your cat object...Google to the rescue!
+
