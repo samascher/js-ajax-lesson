@@ -15,12 +15,14 @@ competencies: Front-end intro
 # AJAX with JS & JQuery
 
 ### Objectives
+*By the end of this lesson, student should be able to:*
 
 - **Implement** an AJAX request with Vanilla JS
 - **Implement** a jQuery AJAX client for a simple REST service
 - **Reiterate** the benefits of separation of concerns – API vs. Client
 
 ### Preparation
+*Before this lesson, student should already be able to:*
 
 - **Understand** basics of JS
 - **Understand** what jQuery is and how to use it for DOM manipulation
@@ -36,11 +38,11 @@ In general the process looks like this – use JavaScript on the client side to 
 
 ### Advantages
 
-- __Faster__ - This is the most obvious reason for using to AJAX on your front-end: AJAX allows easier and quicker interaction between user and website as pages are not reloaded for content to be displayed.  The server doesn't have to get data, render HTML, and then spit it out, it just has to get data and your already-loaded front-end does the rest.
+- __Faster__ - This is the most obvious reason for using AJAX on your front-end: AJAX allows easier and quicker interaction between user and website as pages are not reloaded for content to be displayed.  The server doesn't have to get data, render HTML, and then spit it out, it just has to get data and your already-loaded front-end does the rest.
 
 - __Compact__ - With AJAX, several application features can be handled using a single web page. That means we modularize our app into smaller bits, and it becomes easier to work on.
 
-- __Backend Separated from Front-end__ - Applications that use AJAX-heavy front-ends allow developers to avoid working on both sides of the stack at the same time. Some developers can be dedicated to building an API that just serves data, and others can focus on consuming that data and building interfaces.
+- __Back-end Separated from Front-end__ - Applications that use AJAX-heavy front-ends allow developers to avoid working on both sides of the stack at the same time. Some developers can be dedicated to building an API that just serves data, and others can focus on consuming that data and building interfaces.
 
 
 ### Disadvantages
@@ -72,19 +74,19 @@ Open up your `index.html` in a browser, and you'll see:
 
 Make sure to open your console - we're going to be working with it quite a bit.
 
-Now, we've set a few things up for you. Besides the beautiful layout, we have a form with an input and a textarea. We will be tying this form in tomorrow, but for now all we need is our console.
+Now, we've set a few things up for you. Besides the beautiful layout, we have a form with an input and a textarea. We will be tying this form in later, but for now all we need is our console.
 
 We've also already included jQuery, though we won't use that for the first few minutes.
 
 <!--11:20 10 minutes -->
 
-## GET Requests - Catch Up
+## GET Requests - Code Along
 
 #### Vanilla JavaScript
 
-Open up your browser and the console. We're gonna start with old-school JavaScript, so you can see how it works without any libraries.
+<!--Code-along for this piece -->
 
-_**Note:** You might want to write the code out in Sublime first and then copy it across to your console as it is easier to change typos._
+Open up your browser and the console. We're gonna start with old-school JavaScript, so you can see how it works without any libraries.
 
 ```js
   var request = new XMLHttpRequest();
@@ -119,7 +121,9 @@ Then, of course, we've got a function that runs if the requests works, and anoth
 
 Finally, we send our request and see what happens. In this instance, we get back an array of cats.
 
-<!--11:30 10 minutes -->
+<!--Half-mast for this piece -->
+
+<!--11:30 15 minutes -->
 
 #### jQuery GET Requests
 
@@ -166,7 +170,7 @@ Try that out. If there's any luck, our connection will be a little slow, and you
 
 In jQuery's documentation you can find all the chain-able callback function possibilities – the three you'll probably use a lot are `.done`, `.fail`, and `.always`.
 
-<!--11:40 30 minutes -->
+<!--11:45 30 minutes -->
 
 ## Independent Practice
 
@@ -182,14 +186,18 @@ Now, using your console, I want to you to try a few more API tasks on this endpo
 
 \* First try this with Postman, then check the documentation on these verbs for jQuery.  In order to send data you will need to do two things.  First, you will need to create an object (using JSON).  Second, you will need to convert it to a string.
 
-<!--12:10 10 minutes -->
+<!--12:15 10 minutes -->
 ## Conclusion (5 mins)
 - What's the main use case of AJAX? Why would anyone use it?
 - How do you do a simple GET request in vanilla JS?
 - How do you do a GET request with jQuery?
 - How do you do a PUT, POST, or DELETE request in jQuery?
 
+<!--12:25 5 minutes -->
+
+<!--Give students a few minutes to read the first article below, then pair-share...finally, alert them about the high frequency of the error in the second article, and that the third article is a way to solve it using tools we will learn next week-->
+
 #### Extra Reading
-- [`No 'Access-Control-Allow-Origin' header is present on the requested resource` – WTF?](https://jvaneyck.wordpress.com/2014/01/07/cross-domain-requests-in-javascript/)
 - [What is Cross Origin Resource Sharing (CORS)?](https://www.maxcdn.com/one/visual-glossary/cors/)
+- [`No 'Access-Control-Allow-Origin' header is present on the requested resource` – WTF?](https://jvaneyck.wordpress.com/2014/01/07/cross-domain-requests-in-javascript/)
 - [Using CORS with Express](http://enable-cors.org/server_expressjs.html)
