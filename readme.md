@@ -8,6 +8,7 @@ creator:
 competencies: Front-end intro
 --->
 
+<!--Actually 11:20 -->
 <!--11:00 15 minutes -->
 
 <!--Hook: So now we know how to communicate with an API using Postman.  However, we have all these awesome tools with Javascript that we could use to manipulate, save, and display this data.  It's too bad there's no way for Javascript to interact with web APIs... *psyche!*  The way to do that is called AJAX, and we're going to talk about it today.  -->
@@ -58,6 +59,7 @@ As you're learning how to build APIs on the server side, you need to start learn
 
 While we're going to be tackling some advanced front-end frameworks in the next unit, you, as a junior full-stack developer, need to be able to do something awesome with the APIs you're learning to make. So we're going to tackle the basics and build on them even further, later.
 
+<!--11:29 -->
 <!--11:15 5 minutes -->
 
 ## Setup - Codealong
@@ -78,6 +80,7 @@ Now, we've set a few things up for you. Besides the beautiful layout, we have a 
 
 We've also already included jQuery, though we won't use that for the first few minutes.
 
+<!--Actually 11:35 -->
 <!--11:20 10 minutes -->
 
 ## GET Requests - Code Along
@@ -123,6 +126,7 @@ Finally, we send our request and see what happens. In this instance, we get back
 
 <!--Half-mast for this piece -->
 
+<!--11:47 -->
 <!--11:30 15 minutes -->
 
 #### jQuery GET Requests
@@ -170,6 +174,8 @@ Try that out. If there's any luck, our connection will be a little slow, and you
 
 In jQuery's documentation you can find all the chain-able callback function possibilities – the three you'll probably use a lot are `.done`, `.fail`, and `.always`.
 
+<!--11:57 when started explaining/modeling-->
+<!--12:04 when finished explaining -->
 <!--11:45 30 minutes -->
 
 ## Independent Practice
@@ -186,6 +192,7 @@ Now, using your console, I want to you to try a few more API tasks on this endpo
 
 \* First try this with Postman, then check the documentation on these verbs for jQuery.  In order to send data you will need to do two things.  First, you will need to create an object (using JSON).  Second, you will need to convert it to a string.
 
+<!--Actually 12:26 -->
 <!--12:15 10 minutes -->
 ## Conclusion (5 mins)
 - What's the main use case of AJAX? Why would anyone use it?
@@ -193,6 +200,7 @@ Now, using your console, I want to you to try a few more API tasks on this endpo
 - How do you do a GET request with jQuery?
 - How do you do a PUT, POST, or DELETE request in jQuery?
 
+<!--Ended 12:33, only had time to mention articles -->
 <!--12:25 5 minutes -->
 
 <!--Give students a few minutes to read the first article below, then pair-share...finally, alert them about the high frequency of the error in the second article, and that the third article is a way to solve it using tools we will learn next week-->
