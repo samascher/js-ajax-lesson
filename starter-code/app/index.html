@@ -10,14 +10,44 @@
     </head>
     <body>
       <h1>Cat Rescue</h1>
-      <form id="new-cat">
-        <input type="text" name='cat[name]' id="cat-name" placeholder="What is the cat's name?" value="Mr. Kittums">
+      <form id="new-cat" method="GET">
+        <input type="text" name='cat[name]' id="cat-name" placeholder="What is the cat's name?">
         <textarea name="cat[note]" id="cat-note" placeholder="Tell us a bit about this cat"></textarea>
         <input type="submit" value='Save My Cat'>
       </form>
       <ul id="cats">
+        <li>Mr. Kittums</li>
+        <li>Mr. Kittums</li>
+        <li>Caturnalia</li>
+        <li>Caturnalia</li>
+        <li>Caturnalia</li>
+        <li>Caturnalia</li>
+        <li>Captain Meowington</li>
       </ul>
-      <script src="app.js"></script>
-    </body>
+      <script>
 
+          var catList = $('#cats');
+          var catNameInput = $('#cat-name');
+          var catNoteInput = $('#cat-note');
+          var usersCatName = catNameInput.val();
+          var usersCatNote = catNoteInput.val();
+          var newCat = {
+              name: usersCatName,
+              note: usersCatNote
+          };
+          $('form').on("submit", function(event) {
+            makeResults();
+            event.preventDefault();
+          });
+
+          function makeResults() {
+            var listItem = document.createElement('li');
+            listItem.innerHTML = usersCatName + '<span> - <em>' + usersCatNote + '</em></span>';
+            catList.append(listItem);
+          } 
+
+
+      </script>
+
+    </body>
 </html>
